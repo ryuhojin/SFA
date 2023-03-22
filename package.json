@@ -1,0 +1,33 @@
+{
+  "name": "sfa",
+  "version": "1.0.0",
+  "description": "support more simple, more faster, more advanced your script code.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "library",
+    "clousre",
+    "clonedeep",
+    "immer",
+    "throttle",
+    "debounce",
+    "typescript",
+    "es6",
+    "commonjs"
+  ],
+  "author": "ryuhojin",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^3.20.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^5.0.2"
+  }
+}
