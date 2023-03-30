@@ -16,4 +16,28 @@ const once = (func: Function) => {
   };
 };
 
-export default { once };
+const debounce = (func: Function, delay: number) => {
+  let timeout: number;
+  return function (this: any) {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), delay);
+  };
+};
+
+const throttle = (func: Function, delay: number) => {
+  let wait: Boolean = false;
+  return (...args: any) => {
+    if (wait) {
+      return;
+    }
+    func(...args);
+    wait = true;
+    setTimeout(() => {
+      wait = false;
+    }, delay);
+  };
+};
+
+export default { once, debounce, throttle };
